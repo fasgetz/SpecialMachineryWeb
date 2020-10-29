@@ -6,38 +6,149 @@
     <title>@ViewData["Title"] - SpecialMachinery</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/layout.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SpecialMachinery</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+    <!-- Окно входа в аккаунт -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div id="tabs" class="modal-content">
+                <div class="modal-close">
+                    <button type="button" class="close text-right" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col p-0"><input v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'btn-success' : '' ]" class="btn w-100" type="button" value="Войти"></div>
+                            <div class="col p-0"><input v-on:click="activetab=2" v-bind:class="[ activetab === 2 ? 'btn-success' : '' ]" class="btn w-100" type="button" value="Регистрация"></div>
+                        </div>
+                    </div>
+                </div>
+                <div v-if="activetab === 1" class="modal-body">
+                    <form class="px-4 py-3">
+                        <div class="form-group">
+                            <label for="exampleDropdownFormEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleDropdownFormPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                            <label class="form-check-label" for="dropdownCheck">
+                                Remember me
+                            </label>
+                        </div>
+                        <div class="container text-center">
+                            <button type="submit" class="btn btn-primary">Войти</button>
+                        </div>
+                    </form>
+                </div>
+                <div v-if="activetab === 2" class="modal-body">
+                    <form class="px-4 py-3">
+                        <div class="form-group">
+                            Регистрация
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleDropdownFormEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleDropdownFormPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                            <label class="form-check-label" for="dropdownCheck">
+                                Remember me
+                            </label>
+                        </div>
+                        <div class="container text-center">
+                            <button type="submit" class="btn btn-primary">Войти</button>
+                        </div>
+
+                    </form>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </div>
+    <section class="header">
+        <div class="header__head container-fluid">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-xl-4 header__head__image">
+                        <img src="Images/logo.png" alt="logo">
+                    </div>
+                    <div class="col-xl-8">
+                        <nav class="navbar navbar-expand-xl w-100">
+                            <div class="navbar-brand socialNetworks">
+                                <a href="https://vk.com/club157721479"><i class="fa fa-vk"></i></a>
+                            </div>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                                <span><i class="fa fa-caret-square-o-down"></i></span>
+                            </button>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <h5>Аренда спецтехники в Зеленоградске и Калининградской области</h5>
+                                    </div>
+                                    <div class="contakts col-xl-6">
+                                        <div>
+                                            <a href="tel:84012901910"><i class="fa fa-phone"></i> <span>8-4012-901-910</span></a>
+                                        </div>
+                                        <div>
+                                            <a href="markys.bym@mail.ru"><span>markys.bym@mail.ru</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12 collapse navbar-collapse text-center" id="navbarNavAltMarkup">
+                                        <div class="navbar-nav container">
+                                            <a class="col btn nav-item nav-link active" href="#">Главная<span class="sr-only">(current)</span></a>
+                                            <a class="col btn nav-item nav-link" href="#machineryItems">Каталог спецтехники</a>
+                                            <a class="col btn nav-item nav-link" href="#">Услуги</a>
+                                            <a class="col btn nav-item nav-link" href="#contaktCompany">Контакты</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="header__inform container">
+                <h1 class="text-center">
+                    Аренда спецтехники в Зеленоградске!</h3>
+                    <ul class="header__inform__menu">
+                        <li><h3>предоставление техники в течение 24 часов</h3></li>
+                        <li><h3>доставка до объекта на нашем транспорте</h3></li>
+                        <li><h3>постоянным клиентам скидки</h3></li>
+                    </ul>
+                    <div class="text-center">
+                        <input class="btn btn-success" type="button" value="Оставить заявку">
+                    </div>
+            </div>
+        </div>
+
+    </section>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - SpecialMachinery - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="myfooter">
+        <div class="container text-center">
+            <p>© 2001-2020 ООО "СК "ПАЛАРМ"</p>
+            <p>
+                Аренда спецтехники в Зеленоградске и Калининградской области
+                г. Москва, Очаковское шоссе, 40, строение 5, офис 3
+            </p>
+            <p>Телефон: 8-4012-901-910</p>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

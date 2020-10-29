@@ -1,0 +1,113 @@
+html, body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  background-image: url(../Images/phone.jpg);
+
+  background-size: cover;
+  color: white;
+}
+
+.header nav {
+  box-shadow: none;
+}
+
+.header__head .btn:hover {
+  color: #efbc00;
+}
+
+.header__head .contakts span {
+  font-size: 24px;
+}
+
+.socialNetworks {
+  font-size: 44px;
+}
+.socialNetworks .fa-vk {
+  color: white;
+}
+
+
+.navbar button i {
+  font-size: 42px;
+}
+.fa-caret-square-o-down {
+  color: white;
+
+}
+
+.header__head a {
+  color: white;
+}
+
+.header__head .navbar {
+  background: transparent;
+  border: none;
+
+}
+
+
+.header__head__image img {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-toggler img {
+  height: 50px;
+  width: 50px;
+}
+
+.header__inform {
+  margin-top: 30px;
+  background-color:rgba(0,0,0,.3);
+  padding-bottom: 20px;
+}
+
+.header__inform h1 {
+  padding-top: 10px;
+  font-size: 24px;
+}
+
+.header__inform__menu h3 {
+  font-size: 18px;
+}
+
+/* Секция о компании */
+.about {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* Секция услуг техники */
+
+.Machinery__items h2 {
+  padding-bottom: 20px;
+}
+
+.item__card {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #f6efd8;
+  border-radius: 50px;
+}
+.item__card__poster img {
+  width: 200px;
+  height: 100%;
+}
+
+/* Секция контактов организации */
+
+.contaktCompany {
+  margin-top: 20px;
+}
+
+/* Футер */
+
+.myfooter {
+  padding-top: 20px;
+  margin-top: 30px;
+  height: 200px;
+  background: black;
+  color: white;
+}
