@@ -9,9 +9,9 @@
     <link href="~/css/layout.css" rel="stylesheet" />
     <link href="~/css/site.css" rel="stylesheet" />
 
-
+    @RenderSection("Css", required: false)
+<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
-    <script src="https://use.fontawesome.com/056ddd099c.js"></script>
 </head>
 <body>
     <!-- Окно входа в аккаунт -->
@@ -85,18 +85,34 @@
             <div class="container">
                 <div class="row text-center">
                     <div class="col-xl-4 header__head__image">
-                        <img src="Images/logo.png" alt="logo">
+                        <img src="~/Images/logo.png" alt="logo">
                     </div>
                     <div class="col-xl-8">
                         <nav class="navbar navbar-expand-xl w-100">
                             <div class="navbar-brand socialNetworks">
-                                <div class="d-flex flex-xl-column">
-                                    <a href="https://vk.com/club157721479"><i class="fa fa-vk"></i></a>
-                                    <a href="https://yandex.ru"><i class="fa fa-instagram"></i></a>
+                                <div class="d-flex flex-column">
+                                    <div class="container p-0">
+                                        <div class="row">
+                                            <div class="col-xl-6 col p-0">
+                                                <a href="https://vk.com/club157721479"><i class="fab fa-vk"></i></a>
+                                            </div>
+                                            <div class="col-xl-6 col p-0">
+                                                <a href="https://instagram.com/stroyvverx39"><i class="fab fa-instagram"></i></a>
+                                            </div>
+                                            <div class="col-xl-6 col p-0">
+                                                <a href="https://wa.me/79082901910"><i class="fab fa-whatsapp"></i></a>
+                                            </div>
+                                            <div class="col-xl-6 col p-0">
+                                                <a href="viber://chat?number=%2B79082901910"><i class="fab fa-viber"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
                                 </div>
                             </div>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                                <span><i class="fa fa-caret-square-o-down"></i></span>
+                                <span><i class="fas fa-angle-down"></i></span>
                             </button>
                             <div class="container">
                                 <div class="row">
@@ -108,20 +124,19 @@
                                             <a href="tel:74012901910"><i class="fa fa-phone"></i> <span>+7 4012 901-910</span></a>
                                         </div>
                                         <div>
-                                            <a href="markys.bym@mail.ru"><span>markys.bym@mail.ru</span></a>
+                                            <a href="mailto:kononovich_max@mail.ru"><span>kononovich_max@mail.ru</span></a>
                                         </div>
                                     </div>
                                     <div class="col-xl-12 collapse navbar-collapse text-center" id="navbarNavAltMarkup">
                                         <div class="navbar-nav container">
-                                            <a class="col btn nav-item nav-link active" href="#">Главная<span class="sr-only">(current)</span></a>
-                                            <a class="col btn nav-item nav-link" href="#machineryItems">Каталог спецтехники</a>
-                                            <a class="col btn nav-item nav-link" href="#">Услуги</a>
-                                            <a class="col btn nav-item nav-link" href="#contaktCompany">Контакты</a>
+                                            <a class="col btn nav-item nav-link active" asp-action="Index" asp-controller="Home">Главная<span class="sr-only">(current)</span></a>
+                                            <a class="col btn nav-item nav-link" href="~/#machineryItems">Каталог спецтехники</a>
+                                            <a class="col btn nav-item nav-link" asp-action="gallery" asp-controller="Home">Галерея</a>
+                                            <a class="col btn nav-item nav-link" href="~/#contaktCompany">Контакты</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </nav>
                     </div>
                 </div>
@@ -129,12 +144,12 @@
         </div>
         <div>
             <div class="header__inform container">
-                <h1 class="text-center">
-                    Аренда спецтехники!</h3>
-                    <ul class="header__inform__menu">
-                        <li><h3>- Скидки для больших объемов и постоянных клиентов</h3></li>
-                        <li><h3>- Как наличный, так и безналичный расчет</h3></li>
-                    </ul>
+                <ul class="header__inform__menu">
+                    <li><h3>- Грамотный подбор техники по телефону, при необходимости выезд на объект</h3></li>
+                    <li><h3>- Скидки для постоянных клиентов на долгосрочные объекты</h3></li>
+                    <li><h3>- Работаем в выходные и праздничные дни</h3></li>
+                    <li><h3>- Наличный и безналичный расчет</h3></li>
+                </ul>
                     <div class="text-center">
                         <input class="btn btn-success" type="button" value="Оставить заявку">
                     </div>
@@ -148,11 +163,10 @@
         </main>
     </div>
 
-    <footer class="myfooter">
+    <footer class="myfooter border-top">
         <div class="container text-center">
-            <p>© 2015-2020 ИП Кононович Максим Алексеевич</p>
-            <p> Аренда спецтехники в Калининградская обл., Зеленоградский р-н, г.Зеленоградск, ул. Железнодорожная 36-Б</p>
-            <p><a href="tel:74012901910"><i class="fa fa-phone"></i> <span>+7 4012 901-910</span></a></p>
+            <p>© 2015-2020 ИП Кононович Максим Алексеевич</p>            
+            <p class="myfooter__phone"><a href="tel:74012901910"><i class="fa fa-phone"></i> <span>+7 4012 901-910</span></a></p>
             <p>Пн — Вс: круглосуточно</p>
         </div>
     </footer>

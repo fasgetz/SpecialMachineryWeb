@@ -23,6 +23,11 @@ namespace SpecialMachinery.Controllers
             return View();
         }
 
+        public IActionResult gallery()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
