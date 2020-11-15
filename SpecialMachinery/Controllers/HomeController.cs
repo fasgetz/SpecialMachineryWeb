@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -31,6 +33,37 @@ namespace SpecialMachinery.Controllers
         public IActionResult Privacy()
         {
             return View();
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> SendMessage(SendMessageViewModel vm)
+        {
+            await Task.Run(() =>
+            {
+                // отправитель - устанавливаем адрес и отображаемое в письме имя
+                MailAddress from = new MailAddress("BotMachinery@gmail.com", "Сервис-почта");
+                // кому отправляем
+                MailAddress to = new MailAddress("fasgetz@yandex.ru");
+                // создаем объект сообщения
+                MailMessage m = new MailMessage(from, to);
+                // тема письма
+                m.Subject = $"Новый заказ от {vm.Email}";
+                // текст письма
+                m.Body = $"<h2>{vm.Name} ({vm.Email}) просит связаться по телефону {vm.Phone}</h2>";
+                m.Body += $"<p>{vm.Description}</p>";
+                // письмо представляет код html
+                m.IsBodyHtml = true;
+                // адрес smtp-сервера и порт, с которого будем отправлять письмо
+                SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+                // логин и пароль
+                smtp.Credentials = new NetworkCredential("BotMachinery@gmail.com", "bot12345");
+                smtp.EnableSsl = true;
+                smtp.Send(m);
+            });
+
+
+            return View("SuccessMessage", vm);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

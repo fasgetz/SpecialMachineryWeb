@@ -36,3 +36,4 @@ C:\Users\fasge\Source\Repos\SpecialMachineryWeb\SpecialMachinery\obj\Debug\netco
 C:\Users\fasge\Source\Repos\SpecialMachineryWeb\SpecialMachinery\obj\Debug\netcoreapp3.1\SpecialMachinery.genruntimeconfig.cache
 C:\Users\fasge\Source\Repos\SpecialMachineryWeb\SpecialMachinery\obj\Debug\netcoreapp3.1\SpecialMachinery.csproj.CopyComplete
 C:\Users\fasge\Source\Repos\SpecialMachineryWeb\SpecialMachinery\obj\Debug\netcoreapp3.1\Razor\Views\Home\gallery.cshtml.g.cs
+C:\Users\fasge\Source\Repos\SpecialMachineryWeb\SpecialMachinery\obj\Debug\netcoreapp3.1\Razor\Views\Home\SuccessMessage.cshtml.g.cs

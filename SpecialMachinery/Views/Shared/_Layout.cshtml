@@ -25,57 +25,36 @@
                 </div>
                 <div class="modal-header">
                     <div class="container">
-                        <div class="row">
-                            <div class="col p-0"><input v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'btn-success' : '' ]" class="btn w-100" type="button" value="Войти"></div>
-                            <div class="col p-0"><input v-on:click="activetab=2" v-bind:class="[ activetab === 2 ? 'btn-success' : '' ]" class="btn w-100" type="button" value="Регистрация"></div>
+                        <h5 class="text-center">Форма заказа</h5>
+                        <div class="container text-center">
+                            <a href="tel:74012901910"><i class="fas fa-phone"></i><span id="blink"> +7 4012 901-910</span></a>
                         </div>
                     </div>
                 </div>
-                <div v-if="activetab === 1" class="modal-body">
-                    <form class="px-4 py-3">
-                        <div class="form-group">
-                            <label for="exampleDropdownFormEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleDropdownFormPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
-                        </div>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                            <label class="form-check-label" for="dropdownCheck">
-                                Remember me
-                            </label>
-                        </div>
-                        <div class="container text-center">
-                            <button type="submit" class="btn btn-primary">Войти</button>
-                        </div>
-                    </form>
-                </div>
-                <div v-if="activetab === 2" class="modal-body">
-                    <form class="px-4 py-3">
-                        <div class="form-group">
-                            Регистрация
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleDropdownFormEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleDropdownFormPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
-                        </div>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                            <label class="form-check-label" for="dropdownCheck">
-                                Remember me
-                            </label>
-                        </div>
-                        <div class="container text-center">
-                            <button type="submit" class="btn btn-primary">Войти</button>
-                        </div>
-
-                    </form>
+                <div class="modal-form">
+                    <div class="container">
+                        <form method="post" asp-action="SendMessage" asp-controller="Home">
+                            <div class="form-group">
+                                <label for="Name">Ваше имя:</label>
+                                <input required type="text" maxlength="30" name="Name" class="form-control" id="name" placeholder="Как к вам обращаться?">
+                            </div>
+                            <div class="form-group">
+                                <label for="Email">E-mail:</label>
+                                <input required type="email" name="Email" maxlength="75" class="form-control" id="Email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="Phone">Номер телефона:</label>
+                                <input required type="tel" maxlength="15" name="Phone" class="form-control" id="Phone" placeholder="Телефон">
+                            </div>
+                            <div class="form-group">
+                                <label for="Description">Сообщение:</label>
+                                <textarea required maxlength="500" class="form-control" name="Description" rows="3" placeholder="Введите сообщение"></textarea>
+                            </div>
+                            <div class="container text-center pb-3">
+                                <button type="submit" class="btn btn-info">Заказать</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -150,9 +129,11 @@
                     <li><h3>- Работаем в выходные и праздничные дни</h3></li>
                     <li><h3>- Наличный и безналичный расчет</h3></li>
                 </ul>
-                    <div class="text-center">
-                        <input class="btn btn-success" type="button" value="Оставить заявку">
-                    </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">
+                        Оставить заявку
+                    </button>
+                </div>
             </div>
         </div>
 

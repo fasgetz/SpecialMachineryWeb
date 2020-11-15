@@ -1,0 +1,14 @@
+﻿@*@{
+        ViewData["Title"] = "Галерея";
+    }*@
+
+@section Css {  
+    <link href="~/css/sucess.css" rel="stylesheet" />
+}
+
+@model SpecialMachinery.Models.SendMessageViewModel
+
+<div class="text-center sucess">
+    <h1>@Model.Name!</h1>
+    <h5>Мы с вами свяжемся по номеру телефона @Model.Phone в ближайшее время!</h5>
+</div>
