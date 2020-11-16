@@ -44,7 +44,7 @@ namespace SpecialMachinery.Controllers
                 // отправитель - устанавливаем адрес и отображаемое в письме имя
                 MailAddress from = new MailAddress("BotMachinery@gmail.com", "Сервис-почта");
                 // кому отправляем
-                MailAddress to = new MailAddress("markys.bym5@gmail.com");
+                MailAddress to = new MailAddress("Kononovich_max@mail.ru");
                 // создаем объект сообщения
                 MailMessage m = new MailMessage(from, to);
                 // тема письма
@@ -61,12 +61,6 @@ namespace SpecialMachinery.Controllers
                 smtp.EnableSsl = true;
                 smtp.Send(m);
 
-                // Второму уотправителю
-                // кому отправляем
-                to = new MailAddress("Kononovich_max@mail.ru");
-                // создаем объект сообщения
-                m = new MailMessage(from, to);
-                smtp.Send(m);
             });
 
 

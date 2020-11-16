@@ -24,21 +24,6 @@ html, body {
     font-size: 44px;
 }
 
-/* Номер телефона мигающий */
-#blink {
- 
-    font-size: 24px;
-    font-weight: 700;
-    text-align: center;
-    animation: blur .75s ease-out infinite;
-    text-shadow: 0 0 5px #abc, 0 0 7px #abc;
-}
-
-@keyframes blur {
-    from {
-        text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 50px #fff, 0px 0px 50px #fff, 0px 0px 50px #7B96B8, 0px 0px 150px #7B96B8, 0px 10px 100px #7B96B8, 0px 10px 100px #7B96B8, 0px 10px 100px #7B96B8, 0px 10px 100px #7B96B8, 0px -10px 100px #7B96B8, 0px -10px 100px #7B96B8;
-    }
-}
 
 
     .navbar button i {
