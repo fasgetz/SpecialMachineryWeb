@@ -10,10 +10,34 @@
     <link href="~/css/site.css" rel="stylesheet" />
 
     @RenderSection("Css", required: false)
-<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+        ym(69470179, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        });
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-240H3HWQ7D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-240H3HWQ7D');
+    </script>
 </head>
-<body>
+<body>    
     <!-- Окно входа в аккаунт -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -146,7 +170,7 @@
 
     <footer class="myfooter border-top">
         <div class="container text-center">
-            <p>© 2015-2020 ИП Кононович Максим Алексеевич</p>            
+            <p>© 2015-2020 ИП Кононович Максим Алексеевич</p>
             <p class="myfooter__phone"><a href="tel:74012901910"><i class="fa fa-phone"></i> <span>+7 4012 901-910</span></a></p>
             <p>Пн — Вс: круглосуточно</p>
         </div>

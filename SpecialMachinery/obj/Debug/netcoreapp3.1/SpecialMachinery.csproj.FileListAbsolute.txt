@@ -9,7 +9,6 @@ C:\Users\fasge\Source\Repos\SpecialMachineryWeb\SpecialMachinery\bin\Debug\netco
 C:\Users\fasge\Source\Repos\SpecialMachineryWeb\SpecialMachinery\bin\Debug\netcoreapp3.1\SpecialMachinery.pdb
 C:\Users\fasge\Source\Repos\SpecialMachineryWeb\SpecialMachinery\bin\Debug\netcoreapp3.1\SpecialMachinery.Views.dll
 C:\Users\fasge\Source\Repos\SpecialMachineryWeb\SpecialMachinery\bin\Debug\netcoreapp3.1\SpecialMachinery.Views.pdb
-C:\Users\fasge\Source\Repos\SpecialMachineryWeb\SpecialMachinery\obj\Debug\netcoreapp3.1\SpecialMachinery.csprojAssemblyReference.cache
 C:\Users\fasge\Source\Repos\SpecialMachineryWeb\SpecialMachinery\obj\Debug\netcoreapp3.1\SpecialMachinery.AssemblyInfoInputs.cache
 C:\Users\fasge\Source\Repos\SpecialMachineryWeb\SpecialMachinery\obj\Debug\netcoreapp3.1\SpecialMachinery.AssemblyInfo.cs
 C:\Users\fasge\Source\Repos\SpecialMachineryWeb\SpecialMachinery\obj\Debug\netcoreapp3.1\SpecialMachinery.csproj.CoreCompileInputs.cache
